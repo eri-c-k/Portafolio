@@ -1,0 +1,127 @@
+// -- Buttons --
+
+%btn-shared 
+  display: inline-block
+  padding: 0.8rem 2rem
+  transition: all 0.5s
+  border: none
+  cursor: pointer
+
+
+.btn 
+  &-main 
+    @extend %btn-shared
+    color: $secondary-color
+    background-color: $primary-color
+  
+
+  &-light 
+    @extend %btn-shared
+    color: #333333
+    background-color: $primary-light-color
+  
+
+  &-dark 
+    @extend %btn-shared
+    color: #f4f4f4
+    background-color: $primary-dark-color
+  
+
+
+a[class^="btn-"]:hover,
+input[class^="btn-"]:hover,
+button[class^="btn-"]:hover 
+  color: #f4f4f4
+  background-color: $secondary-color
+  
+
+
+// -- Backgrounds --
+.bg 
+  &-main 
+    background: $primary-color
+    color: set-text-color($primary-color)
+  
+  &-dark 
+    background: $primary-dark-color
+    color: set-text-color($primary-dark-color)
+  
+  &-light 
+    background: $primary-light-color
+    color: set-text-color($primary-light-color)
+  
+  &-medium 
+    background: $secondary-color
+    color: set-text-color($secondary-color)
+  
+
+
+.lead 
+  font-size: 1.3rem
+  margin-bottom: 2rem
+  padding: 2rem
+
+
+.text-center 
+  text-align: center
+
+
+// -- Padding --
+.py 
+  &-1 
+    padding: 1rem 0
+  
+  &-2 
+    padding: 2rem 0
+  
+  &-3 
+    padding: 3rem 0
+  
+  &-4 
+    padding: 4rem 0
+  
+
+// -- Margin --
+.my 
+  &-1 
+    margin: 1rem 0
+  
+  &-2 
+    margin: 2rem 0
+  
+  &-3 
+    margin: 3rem 0
+  
+  &-4 
+    margin: 4rem 0
+.mx
+  &-1 
+    margin: 0 1rem
+  
+  &-2 
+    margin: 0 2rem
+  
+  &-3 
+    margin: 0 3rem
+  
+  &-4 
+    margin: 0 4rem
+  
+
+
+.section-title 
+  font-size: 2rem
+  display: block
+  padding-bottom: 0.5rem
+  text-align: center
+  font-weight: 100
+  text-transform: uppercase
+
+
+.bottom-line 
+  height: 2px
+  width: 3rem
+  background: $secondary-color
+  display: block
+  margin: 0 auto 1rem auto
+

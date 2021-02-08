@@ -1,0 +1,348 @@
+// ################################## 1200px #############################
+@media (min-width: 1200px) 
+  #navbar
+    .menu-wrap
+      display: none
+
+  h1 
+    font-size: 5rem
+
+// ################################### 1150px ############################
+@media(max-width: 1150px)
+  #work
+    .wrap-container
+      max-width: 780px
+      padding: 2rem
+
+    .items 
+      grid-template-columns: repeat(2, 1fr)
+      grid-gap: 1.5rem
+      align-items: center
+
+    .outer-window-sml
+      width: 350px
+      height: 300px
+    
+    .modal
+      top: 300px
+
+// ################################### 1024px ############################
+// Tablets & Smaller
+@media (max-width: 1024px) 
+  #navbar
+    .menu-wrap
+      display: none
+
+  h1 
+    font-size: 5rem
+
+  .container
+    max-width: 1145px  
+    width: 100%
+    margin: 0  !important 
+    padding: 0 !important
+
+  #header
+    height: 50rem
+
+    .header-content 
+      padding-top: 5rem
+      margin-left: 5rem
+
+  #about-b 
+    .specials
+      grid-template-columns: 1fr 
+      margin: 0 5rem 
+    .contact-info,
+  
+      grid-template-columns: 1fr 
+    
+    .modal
+      top: 270px
+
+// ################################## 800px ############################
+@media (max-width: 800px) 
+  .container 
+    padding: 1rem
+    max-width: 760px
+  
+  h1 
+    font-size: 3rem
+  
+  #about
+    &-a
+      .bio
+        flex-direction: column
+        
+        div:nth-child(2)
+          margin-left: 0rem 
+        p
+          padding: 1rem 0
+          
+  #work
+    .wrap-container
+      max-width: 760px
+      padding: 2rem
+    .items 
+      grid-template-columns: repeat(2, 1fr)
+      grid-gap: 1rem
+      align-content: center
+      align-items: center
+
+    .outer-window-sml
+      width: 350px
+      height: 300px
+    
+    .flex-align
+      flex-direction: column
+      
+    .modal
+      top: 480px
+
+  #contact 
+    &-a 
+      .text-fields 
+        grid-template-areas: "name" "email" "subject" "phone" "message"
+        padding: 0 .5rem
+    &-b 
+
+      h1
+        font-size: 1rem
+
+      .contact-info
+        grid-template-columns: 1fr
+      
+      div 
+        margin-bottom: 1rem
+        padding-bottom: 1rem
+        border-bottom: 1px solid #5555
+
+        &:last-child 
+          border: none
+          margin-bottom: 0
+          padding-bottom: 0 
+    &-c 
+      h1 
+        font-size: 2rem
+        margin-bottom: 1rem
+
+//  ################################ 740px ########################
+@media(max-width: 740px)
+  #work
+    .items 
+        grid-template-columns: 1fr 
+        grid-gap: 1.5rem
+        align-items: center
+    .modal
+      top: 470px
+ 
+// ################################### 630 px ###########################
+@media(max-width: 630px) 
+  body
+    .padd
+      padding-top: 250px
+
+  #navbar
+    .main-nav
+      display: none
+    
+    .menu-wrap
+      position: sticky
+      display: flex
+      flex-direction: column
+      background: $primary-color
+      ul li
+        display: flex
+        flex-direction: column
+        color: $secondary-color      
+        padding: 1rem
+        position: relative
+        border-bottom: 1px transparent solid
+        
+        & a 
+          color: $secondary-color
+          text-decoration: none
+          border-bottom: 1px transparent solid
+          &:hover
+            border-bottom: 1px $secondary-color solid
+
+  #work
+    .modal
+      top: 440px
+
+// ############################# 600px ##################################
+@media (max-width: 600px) 
+  .container
+    max-width: auto  
+    width: 100%
+
+  #header 
+    height: 30rem
+   
+    .header-content 
+      justify-content: center
+      text-align: start
+      align-items: start
+      h1
+        font-size: 2.5rem
+
+  #about 
+    &-a
+      .bio
+        margin: 0.5rem
+        
+        div:nth-child(2)
+          margin-left: 0px
+        
+    &-b
+      grid-template-columns: 1fr
+      
+      .specials 
+        margin: 2rem
+
+        div 
+          border-bottom: 1px $primary-light-color solid;
+          padding-bottom: 1rem;
+
+          &:last-child 
+            border: none;
+            padding-bottom: 0
+
+  #work    
+    .items 
+      grid-template-columns: 1fr 
+      grid-gap: 1.5rem
+      align-items: center
+     
+  #main-footer 
+    p
+      font-size: 1rem
+      margin: 1rem 0
+
+    .social
+      .fab  
+        margin-right: .5rem
+        height: 40px
+        width: 40px
+        padding: .4rem
+
+  #navbar ul li 
+    display: block 
+
+  #navbar ul li:hover ul 
+    width: 100%
+    position: relative
+
+// ###################################### 580px #######################
+// Landscape
+@media (max-height: 580px) 
+
+  h1 
+    font-size: 2rem
+  
+  h2 
+    font-size: 1rem
+  
+  #header
+    .header-content 
+      padding-top: 3rem
+
+// #################################### 500px ###############################
+@media (max-width: 500px) 
+  .page-social
+    display: none
+    visibility: hidden
+  #work
+
+    .modal
+      top: 410px
+      width: 90%
+     
+// ################################# 460px ############################
+@media (max-width: 460px) 
+  #header
+    .header-content 
+      margin-left: 1rem
+      padding-top: 8rem
+
+      align-items: center
+      justify-content: center
+      text-align: center
+
+      h1 
+        font-size: 2rem
+  #about
+    &-a
+
+      .bio-image
+        width: 200px
+        height: 200px
+        margin: 0.5rem
+        padding: 0.5rem
+      
+      .bio
+        width: 90%
+        margin: 0.5rem
+
+        p
+          padding: 0
+          text-align: center
+          align-items: center
+          justify-content: center
+
+  #contact
+    h1
+      font-size: 1rem
+  
+  #work
+    .wrap-container
+      max-width: 360px
+      padding: 0px
+
+    .outer-window-sml
+      width: 330px
+      height: 280px
+
+    .flex-grill-bottom-s 
+      width: 40px
+      left: 180px
+
+    .modal
+      top: 380px
+      padding: 1rem
+
+      a
+        margin: .5rem
+    
+    .img-mookup
+      margin-top: 4rem
+
+    // .close-modal
+    //   font-size: 2rem
+
+// Skills & Knowledge Line 
+// ####################################### 900px #######################
+@media(max-width: 900px) 
+  #timeline ul li div 
+    width: 200px
+
+  #timeline ul li:nth-child(even) div 
+    left: -254px
+          
+  
+@media(max-width: 600px) 
+  #timeline ul li 
+    margin-left: 40px
+  
+  #timeline ul li div 
+
+    width: calc(100vw - 50vw)
+
+  #timeline ul li:nth-child(even) div 
+    left: 65px
+  
+  #timeline ul li:nth-child(even) div:before 
+    left: -15px
+    border-width: 8px 16px 8px 0
+    border-color: transparent $primary-color transparent transparent
+    

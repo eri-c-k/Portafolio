@@ -1,0 +1,13 @@
+node_modules
+jspm_packages
+
+
+.prettierrc
+*.DS_Store
+
+### Sass ###
+.sass-cache/
+*.css.map
+*.sass.map
+*.scss.map
+

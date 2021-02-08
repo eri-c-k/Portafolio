@@ -1,0 +1,510 @@
+/* ############################################################ */
+/* Outer window */
+.outer-window-sml,
+.outer-window 
+  position: relative  
+  align-items: center
+  vertical-align: middle
+  margin: auto
+  width: 700px
+  height: 300px
+  border: solid 2px $secondary-color
+  z-index: 2
+ 
+.outer-window-sml
+  width: 350px
+  height: 300px
+// .outer-window-sml
+  // width: 330px
+  // height: 280px
+ 
+/* #############################################################*/
+/* Cut sections */
+.left-cut-sml,
+.left-cut 
+  position: absolute
+  top: 50%
+  left: -2px
+  background: $primary-dark-color
+  width: 5px
+  height: 100px
+  z-index: 2
+
+
+.right-cut-sml,
+.right-cut 
+  position: absolute
+  bottom: 50%
+  right: -2px
+  background: $primary-dark-color
+  width: 2px
+  height: 100px
+  z-index: 2
+
+.top-cut-sml,
+.top-cut 
+  position: absolute
+  top: -2.3px
+  left: 141px
+  background: $primary-dark-color
+  width: 120px
+  height: 3px
+  z-index: 1
+
+.top-cut-sml 
+  width: 56px
+  left: 65px
+
+.bottom-cut-sml,
+.bottom-cut 
+  position: absolute
+  bottom: -2.3px
+  right: 141px
+  background: $primary-dark-color
+  width: 120px
+  height: 3px
+  z-index: 2
+
+.bottom-cut-sml 
+  width: 56px
+  right: 65px
+
+
+/* ########################################################### */
+/* Grill */
+.flex-grill-top-s,
+.flex-grill-top 
+  position: relative
+  top: -6px
+  left: 73px
+  display: flex
+  justify-content: space-between
+  width: 100px
+  height: 15px
+  z-index: 2
+
+.flex-grill-top-s 
+  width: 40px
+  left: 40px
+
+
+.flex-grill-top-s > div,
+.flex-grill-top > div 
+  width: 10px
+  height: 10px
+  background: $secondary-color
+  transform: skew(-45deg)
+  z-index: 3
+
+.flex-grill-bottom-s,
+.flex-grill-bottom 
+  position: absolute
+  bottom: -10px
+  left: 470px
+  display: flex
+  justify-content: space-between
+  width: 100px
+  height: 15px
+  z-index: 2
+
+.flex-grill-bottom-s 
+  width: 40px
+  left: 200px
+
+.flex-grill-bottom-s > div,
+.flex-grill-bottom > div 
+  width: 10px
+  height: 10px
+  border: solid 1px $secondary-color
+  transform: skew(-45deg)
+  z-index: 3
+
+
+/* ########################################################### */
+/* Window thick border */
+.small-window,
+.big-window 
+  border: solid 10px $secondary-color
+  width: inherit
+  height: inherit
+  max-width: 100%
+  max-height: 100%
+  z-index: 2
+
+
+.small-window 
+  width: 350px
+  height: 300px
+
+/* Window side cut sections */
+
+.left-cut--small,
+.left-cut--big 
+  position: absolute
+  top: 18%
+  left: 0
+  width: 7px
+  height: 200px
+  background: $primary-dark-color
+  z-index: 2
+
+.right-cut--small,
+.right-cut--big 
+  position: absolute
+  bottom: 18%
+  right: 0
+  width: 7px
+  height: 200px
+  background: $primary-dark-color
+  z-index: 2
+
+
+.left-cut--small:before,
+.left-cut--big:before 
+  content: ""
+  position: absolute
+  top: -5px
+  left: 0px
+  width: 10px
+  height: 30px
+  z-index: 2
+  background: $primary-dark-color
+  transform: skewY(-45deg)
+
+
+.right-cut--small:before,
+.right-cut--big:before 
+  content: ""
+  position: absolute
+  top: -5px
+  right: 0px
+  width: 10px
+  height: 30px
+  background: $primary-dark-color
+  z-index: 2
+  transform: skewY(45deg)
+
+
+.left-cut--small::after,
+.left-cut--big::after 
+  content: ""
+  position: absolute
+  bottom: -5px
+  left: 0px
+  width: 10px
+  height: 30px
+  background: $primary-dark-color
+  z-index: 2
+  transform: skewY(45deg)
+
+.right-cut--small:after,
+.right-cut--big:after 
+  content: ""
+  position: absolute
+  bottom: -5px
+  right: 0px
+  width: 10px
+  height: 30px
+  background: $primary-dark-color
+  z-index: 2
+  transform: skewY(-45deg)
+
+
+/* ######################################################################################## */
+/* Top and bottom cut sections */
+.top-cut--small,
+.top-cut--big 
+  position: absolute
+  top: 0
+  left: 10%
+  height: 7px
+  width: 640px
+  min-width: auto
+  max-width: auto
+  background: $primary-dark-color
+
+
+.bottom-cut--small,
+.bottom-cut--big 
+  position: absolute
+  bottom: 0
+  left: 10%
+  height: 7px
+  width: 640px
+  min-width: auto
+  max-width: auto
+  background: $primary-dark-color
+
+
+/* Small window prototype */
+.bottom-cut--small,
+.top-cut--small 
+  width: 270px
+
+
+/* ######################################################################################## */
+/* With pseudo-selements we skew the corner sections of bigger border */
+.top-cut--small::before,
+.top-cut--big::before 
+  content: ""
+  position: absolute
+  top: 1%
+  left: -5px
+  width: 45px
+  height: 10px
+  background: $primary-dark-color
+  z-index: 1
+  transform: skew(-45deg)
+
+
+.top-cut--small::after,
+.top-cut--big::after 
+  content: ""
+  position: absolute
+  top: 1%
+  right: -5px
+  width: 45px
+  height: 10px
+  background: $primary-dark-color
+  z-index: 1
+  transform: skew(45deg)
+
+
+.bottom-cut--small::before,
+.bottom-cut--big::before 
+  content: ""
+  position: absolute
+  bottom: 1%
+  left: -5px
+  width: 45px
+  height: 10px
+  background: $primary-dark-color
+  z-index: 1
+  transform: skew(45deg)
+
+.bottom-cut--small::after,
+.bottom-cut--big::after 
+  content: ""
+  position: absolute
+  bottom: 1%
+  right: -5px
+  width: 45px
+  height: 10px
+  background: $primary-dark-color
+  z-index: 1
+  transform: skew(-45deg)
+
+.top-cut--small::before,
+.top-cut--small::after,
+.bottom-cut--small::before,
+.bottom-cut--small::after 
+  width: 20px
+
+// ############################################################################################################################
+.items 
+  // position: relative
+  display: grid
+  width: 100%
+  grid-template-columns: repeat(3, 1fr)
+  box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.3)
+  grid-gap: 1.5rem
+  align-content: center
+  align-items: center
+
+
+
+.item 
+  position: relative
+  background: $primary-color
+  overflow: hidden
+  width: 100%
+  height: 100%
+  min-width: auto
+  max-width: auto
+
+  // Add the overlay
+  &::after 
+    content: ""
+    position: absolute
+    display: block
+    background: inherit
+    
+    opacity: 0.7
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    transform: scale(2) translateX(-75%) translateY(-75%) rotate(-28deg)
+    transition: transform 3s cubic-bezier(0.2, 1, 0.3, 1)
+    z-index: 1
+
+  // Bring in main color overlay
+  &:hover:after 
+    
+    transform: scale(2) translateX(0) translateY(0) rotate(-28deg)
+    transition: transform 3s cubic-bezier(0.2, 1, 0.3, 1)
+  
+  // Scale image on hover
+  &:hover &-image 
+    transform: scale(1.5)
+    
+  
+  // Bring in text on hover
+  &:hover &-text 
+    opacity: 1
+    transform: translateY(0)
+  
+  &-image 
+    height: 100%
+    transform: translateZ(0)
+    display: block
+    transition: transform 750ms cubic-bezier(0.2, 1, 0.3, 1)
+    
+  &-image::before 
+    content: ""
+    display: block
+    padding-top: 75%
+    overflow: hidden
+    
+
+  &-image img 
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    line-height: 0
+    
+  &-text 
+    position: absolute
+    top: 0
+    left: 0
+    bottom: 0
+    right: 0
+    opacity: 0
+    text-align: center
+    z-index: 2
+    color: #fff
+    transform: translateY(-20%)
+    transition: opacity 500ms cubic-bezier(0.2, 1, 0.3, 1) 
+    //Don't forget 
+    transform: 500ms cubic-bezier(0.2, 1, 0.3, 1)
+    transition-delay: 300ms
+  
+  &-text-wrap 
+    position: absolute
+    width: 100%
+    top: 50%
+    transform: translateY(-50%)
+  
+  &-text-title 
+    font-size: 2rem
+    padding: 0 1rem
+    margin: 5px 0 0 0
+  
+  &-text-category 
+    text-transform: uppercase
+    font-size: 1, 2rem
+    opacity: 0.7
+    margin: 0
+  
+// Window info
+.show-modal 
+  font-size: .75rem
+  font-weight: 400
+  padding: .5rem 1.5rem
+  margin: 1rem
+  border: none
+  border-radius: 5rem
+  cursor: pointer
+
+  &:hover
+    background-color: $secondary-color
+    color: #444
+
+
+.close-modal 
+  position: absolute
+  top: 1.2rem
+  right: 2rem
+  font-size: 5rem
+  color: $secondary-color
+  cursor: pointer
+  border: none
+  background: none
+
+h1 
+  font-size: 2.5rem
+  margin-bottom: 2rem
+p 
+  font-size: 1.8rem
+
+
+/* -------------------------- */
+/* CLASSES TO MAKE MODAL WORK */
+.hidden 
+  display: none
+
+.modal 
+  position: relative
+  top: 330px
+  left: 50%
+  transform: translate(-50%, -50%)
+  width: 90%
+  height: auto
+  background: linear-gradient(to top left, $secondary-dark-color 0%,$primary-dark-color 100%);
+  opacity: 0.8
+  padding: 4rem
+  border-radius: 5px
+  backdrop-filter: blur(1.5px)
+  box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3)
+  z-index: 10
+
+  a
+    font-size: .75rem
+    font-weight: 400
+    padding: .5rem 1.5rem
+    margin: 1rem
+    border: none
+    border-radius: 5rem
+    cursor: pointer
+  
+  .flex-align
+    display: flex
+    flex-direction: row
+    justify-content: center
+    align-items: center
+    text-align: center
+
+    .web-info
+      padding: 1.5rem  
+      margin: 1rem auto
+      h2
+        margin-top: 1rem
+      p
+        margin-bottom: 1rem
+
+  .img-mookup
+    max-width: 500px
+   
+    .mookup
+      // max-width: 500px
+      width: auto
+      height: auto
+      border-radius: 5px
+      padding-bottom: 1rem
+
+    i
+      font-size: 1.8rem
+      padding-bottom: 1rem
+
+.overlay 
+  position: absolute
+  top: 0
+  left: 0
+  width: 100%
+  height: 100%
+  background-color: rgba(0, 0, 0, 0.6)
+  backdrop-filter: blur(2px)
+  z-index: 5
+

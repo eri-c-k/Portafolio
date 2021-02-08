@@ -1,0 +1,41 @@
+// Set Tex Color
+@function set-text-color($color) 
+  @if (lightness($color) > 50) 
+    @return #000000;
+  @else 
+    @return #ffffff;
+  
+
+// n is number of stars required
+@function multiple-box-shadow($n) 
+  $value: #{random(10000)}px #{random(10000)}px #fff
+  @for $i from 2 through $n 
+    $value: #{$value}, #{random(10000)}px #{random(10000)}px #fff
+  @return unquote($value)
+
+$shadows-small: multiple-box-shadow(1000)
+$shadows-medium: multiple-box-shadow(700)
+$shadows-big: multiple-box-shadow(400)
+
+
+
+// Sass mixin to add vendor prefixes:
+=keyframes($name)
+  @-webkit-keyframes #{$name}
+    @content
+  @-moz-keyframes #{$name}
+    @content
+  @-ms-keyframes #{$name}
+    @content
+  @keyframes #{$name}
+    @content
+
+  // Variables
+$primary-color: #38495a
+$secondary-color:  #00eaff
+$primary-dark-color: #1b2735
+$secondary-dark-color: #090a0f
+$primary-light-color: #fff
+$secondary-light-color: #ccc
+$website-width: 1280px
+

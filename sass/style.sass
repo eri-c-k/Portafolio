@@ -1,0 +1,501 @@
+@import url('https://fonts.googleapis.com/css2?family=Goldman&display=swap')
+@import "config"
+@import "utilities"
+@import "grid"
+@import 'menu-overlay'
+
+*
+  margin: 0
+  padding: 0
+  box-sizing: inherit
+
+html 
+  box-sizing: border-box
+  
+body
+  font-family: 'Goldman', cursive
+  position: relative
+  height: 100vh
+  height: 100%
+  line-height: 1.4
+  color: $primary-light-color
+  background: radial-gradient(circle at top, $primary-dark-color 0% , $secondary-dark-color 100% )
+  // overflow-wrap: hidden
+  overflow-x: hidden
+
+ul
+  list-style: none
+
+a
+  text-decoration: none
+  color: $primary-light-color
+
+h1
+  text-transform: uppercase
+p 
+  font-size: 1.2rem
+
+img
+  max-width: 100%
+
+#stars
+  &1
+    width: 1px
+    height: 1px
+    background: transparent
+    box-shadow: $shadows-small
+    animation: animStar 50s linear infinite
+    background-attachment: fixed
+
+    &::after
+      content: ''
+      position: absolute
+      top: 2000px
+      width: 1px
+      height: 1px
+      background: transparet
+      box-shadow: $shadows-small
+  &2
+    width: 2px
+    height: 2px
+    border-radius: 50%
+    background: transparent
+    box-shadow: $shadows-medium
+    animation: animStar 100s linear infinite
+    background-attachment: fixed
+
+    &::after
+      content: ''
+      position: absolute
+      top: 2000px
+      width: 2px
+      height: 2px
+      background: transparet
+      box-shadow: $shadows-medium
+  &3
+    width: 2.5px
+    height: 2.5px
+    border-radius: 50%
+    background: transparent
+    box-shadow: $shadows-big
+    animation: animStar 150s linear infinite
+    background-attachment: fixed
+
+    &::after
+      content: ''
+      position: absolute
+      top: 2000px
+      width: 2.5px
+      height: 2.5px
+      background: transparet
+      box-shadow: $shadows-big
+
+// Implement css keyframes in the sass syntax:
+@keyframes animStar
+  0%
+    transform: translateY(0)
+  100%
+    transform: translateY(-2000px)
+
+// Use mixin in Sass syntax:
++keyframes(animStar)
+  0%
+    transform: translateY(0)
+  100%
+    transform: translateY(-2000px)
+
+.container 
+  width: fit-content(100%)
+  max-width: 100%
+  margin: auto 0
+  padding: 1rem 1.5rem
+  margin: 0 auto
+  overflow: hidden
+
+.wrap-container
+  max-width: 1145px
+  overflow: hidden
+  padding: 1rem
+  margin: auto 
+
+// -- ##### Navigation #####--
+#navbar 
+  position: fixed
+  top: 0
+  display: flex
+  align-items: center
+  justify-content: flex-end
+  background: $primary-color
+  opacity: 0.95
+  width: 100%
+  padding: 0 30px
+  transition: 0.5s
+  z-index: 20
+
+  .navbar
+    .top
+      background: transparent
+
+#navbar ul 
+  list-style: none
+
+#navbar ul li 
+  color: $secondary-color
+  display: inline-block
+  padding: 1rem
+  position: relative
+
+#navbar ul li a 
+  color: $secondary-color
+  text-decoration: none
+
+/* Hide nested ul by default */
+#navbar ul li ul 
+  display: none
+
+#navbar ul li:hover 
+  cursor: pointer
+  // background: $primary-color
+  color: #fff
+
+#navbar ul li:hover a 
+  color: #fff
+
+/* Nested dropdown show */
+#navbar ul li:hover ul 
+  background: $primary-color
+  display: block
+  position: absolute
+  left: 0
+  width: 200px
+  margin-top: 1rem
+
+#navbar ul li:hover ul li 
+  display: block
+  background: #e7e7e7
+
+#navbar ul li:hover ul li a 
+  color: #333
+
+#navbar ul li:hover ul li:hover 
+  background: #e0e0e0
+  color: inherit
+
+#navbar ul li:hover ul li span 
+  float: right
+  color: #fff
+  background: $secondary-color
+  padding: 0.2rem 0.5rem
+  text-align: center
+  font-size: 0.8rem
+  border-radius: 5px
+
+#navbar ul li:hover ul li:hover span 
+  background: $secondary-dark-color
+
+// -- Header --
+#header 
+  background: none
+  height: 100vh
+  padding: 20% 0
+  // Header Content
+  .header-content 
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: start
+    text-align: start
+    
+    h1 
+      color: $secondary-color
+      font-size: 3rem
+      font-weight: 400
+    
+    h2
+      color: $secondary-color    
+      
+    span,h1,h2
+      background: linear-gradient(white, $secondary-color)
+      -webkit-background-clip: text
+      -webkit-text-fill-color: transparent
+
+    a:hover 
+      background-color: $secondary-color
+      color: linear-gradient(white, $primary-color)
+      
+  // Social Icons fixed-right
+  .page-social
+    position: fixed
+    top: calc( 50% - 15% )
+    right: 0%
+
+    a 
+      line-height: 80px
+      margin-bottom: 2px
+      display: flex
+      flex-direction: column
+      align-items: center
+      justify-content: center
+      width: 75px
+      height: 65px
+      border-bottom-left-radius: 3px
+      border-top-left-radius: 3px
+      text-decoration: none
+      background-color: rgba(204, 204, 204, 0.1)
+      text-align: center
+
+      &:-webkit-any-link 
+        color: webkit-link
+        cursor: pointer
+
+      &:hover 
+        color: $secondary-color
+    
+  .txt-type > .txt 
+    border-right: 0.2rem solid $secondary-color
+
+// ----###### About ######----
+#about 
+  &-a  
+    
+    .bio-image 
+      width: 300px
+      height: auto
+      border-radius: 50%
+      border: none
+      margin: 3rem
+      // box-shadow: 2px 5px 10px 0 rgba(0, 0, 0, 0.6)
+      // box-shadow: 2px 10px 5px 20px 0 rgba(0, 0, 0, 0.3)
+
+      &:hover
+        transform: scale(1.2) 
+        transition: all .5s ease-in-out 
+        
+    .bio 
+      padding: 1rem
+      margin: 3rem
+      display: flex
+      flex-direction: row
+      text-align: center
+      align-items: center
+      justify-content: center   
+      background: linear-gradient(to top left, $primary-color,$secondary-dark-color);
+      backdrop-filter: blur(0px) !important
+      box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3)
+      color: $primary-light-color
+      // opacity: 0.75
+
+      div:nth-child(2)
+        margin-left: 4rem
+        padding: 1rem
+
+      h2 
+        font-size: 1.5rem
+        padding: 1rem
+        margin: 0 1rem
+        line-height: 1.5
+      p
+        font-size: 1rem
+        font-weight: normal
+        padding: 1rem 2rem
+        margin: .5rem 0
+  
+  &-b
+    .specials 
+      margin-top: 3rem
+      padding: 0 1rem
+      display: grid
+      grid-gap: 1rem
+      grid-template-columns: repeat(3, 1fr)
+
+      .fas 
+        color: $secondary-color
+        // padding-bottom: 1rem
+        margin: 1.5rem
+
+      div 
+        margin: auto
+
+      h3
+        padding-bottom: .75rem
+      
+      p 
+        padding: 1rem
+
+  
+
+// ----###### Skills & Knowledge line ######-----
+#timeline ul 
+  background: $primary-dark-color
+  padding: 50px 0
+
+/* Create Line */
+#timeline ul li 
+  list-style: none
+  position: relative
+  width: 6px
+  margin: 0 auto
+  padding-top: 50px
+  background: $secondary-color
+
+/* Boxes */
+#timeline ul li div 
+  position: relative
+  bottom: 0
+  width: 400px
+  padding: 1rem
+  background: $primary-color
+  transition: all 0.5s ease-in-out
+  visibility: hidden
+  opacity: 0
+
+/* Right Side */
+#timeline ul li:nth-child(odd) div 
+  bottom: 20px
+  left: 65px
+  transform: translate(200px, 0)
+
+/* Left Side */
+#timeline ul li:nth-child(even) div 
+  bottom: 20px
+  left: -464px
+  transform: translate(-200px, 0)
+
+/* Dots */
+#timeline ul li:after 
+  content: ''
+  position: absolute
+  left: 50%
+  bottom: 0
+  width: 70px
+  height: 70px
+  background: inherit
+  transform: translateX(-50%)
+  border-radius: 50%
+  transition: background 0.5s ease-in-out
+
+#timeline ul li i
+  font-size: 3rem
+  position: absolute
+  bottom: 10px
+  text-align: center 
+  left: -20px
+  z-index: 2
+
+/* Arrows Base */
+#timeline div:before 
+  content: ''
+  position: absolute
+  bottom: 5px
+  width: 0
+  height: 0
+  border-style: solid
+
+/* Right Side Arrows */
+#timeline ul li:nth-child(odd) div:before 
+  left: -15px
+  border-width: 8px 16px 8px 0
+  border-color: transparent $primary-color transparent transparent
+
+/* Left Side Arrows */
+#timeline ul li:nth-child(even) div:before 
+  right: -15px
+  border-width: 8px 0 8px 16px
+  border-color: transparent transparent transparent $primary-color
+
+/* Show Boxes */
+#timeline ul li.show div 
+  transform: none
+  visibility: visible
+  opacity: 1
+
+#timeline ul li.show:after 
+  background: $primary-color
+
+
+// ----###### Contact Page ######----
+#contact  
+  &-a 
+    .text-fields 
+      display: grid
+      width: 80%
+      grid-template-areas:  "name email" "subject phone" "message message"
+      grid-gap: 1.2rem
+      margin: 1rem auto 
+      margin-bottom: .5rem
+
+      .text-input 
+        padding: 0.5rem 1rem
+        background: linear-gradient(to top right, $secondary-dark-color 0% ,$primary-dark-color %100); 
+        border: $primary-color
+        color: $secondary-color
+
+        &:focus
+          color: $secondary-color
+          border: $secondary-color
+          border: 1px solid $secondary-color
+
+      // Grid Areas
+      .name-input
+        grid-area: name
+      .name-email
+        grid-area: email
+      .name-subject
+        grid-area: subject
+      .name-phone
+        grid-area: phone
+      .message-input
+        grid-area: message
+        height: 250px
+        grid-template-columns: max-content
+
+    button[type="submit"] 
+      width: 50%
+    
+  // Section B
+  &-b 
+    .contact-info 
+      display: grid
+      grid-template-columns: repeat(3, 1fr)
+      grid-gap: .5rem
+      text-align: center
+    
+  // Section C
+  &-c 
+    h1 
+      text-align: center
+      font-size: 2rem
+
+
+// ----####### Footer #######----
+#main-footer 
+  background: $secondary-dark-color
+  color: #fff
+  height:
+
+  .footer-content 
+    display: flex
+    flex-direction: column
+    justify-content: center
+    height: auto
+    align-items: center
+    text-align: center
+    
+    p
+      margin: 1rem 0
+
+    .social
+      text-align: center
+      .fab  
+        margin-right: 1rem
+        border: 2px #fff solid
+        border-radius: 50%
+        height: 80px
+        width: 80px
+        padding: .8rem
+
+        &:hover 
+          background-color: $secondary-color
+      
+// Import media queries
+@import "media"
