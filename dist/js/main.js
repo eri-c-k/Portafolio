@@ -222,7 +222,7 @@ const modals = {
     <div class="flex-align">
     
         <div class="img-mookup">
-        <img src="/dist/img/${mod.img}.png" alt="Mookup" class="mookup" />
+        <img src="img/${mod.img}.png" alt="Mookup" class="mookup" />
         ${mod.icons}
         <img/>
         </div>
