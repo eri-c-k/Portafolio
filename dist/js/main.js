@@ -190,7 +190,7 @@ const modals = {
     img: 7,
     id: 'modal-6',
     text: `It is a game that shows a random dice on the screen, it is based on two simple rules.
-        1. If the value of the die is 1, the player loses his turn,
+        1. If the value of the dice is 1, the player loses his turn,
         2. The first player to score 100 points wins the game.
        This game is made with HTML Sass and Javascript.`,
     url: 'https://laughing-noether-509132.netlify.app/',
