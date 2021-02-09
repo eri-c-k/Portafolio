@@ -119,7 +119,7 @@ const modals = {
     img: 1,
     id: 'modal-1',
     text:
-      'Edge ledger is a project  build on HTML, CSS, JavaScript and JQuery, the layout is mainly design with flexbox, the navbar has an implemented JQuery smooth scrooling"',
+      'It is a business Website template build on HTML, CSS and JQuery, the layout is mainly design with flexbox and the navigation bar smooth scrolling the to the landing page.',
     url: 'https://naughty-lumiere-69e1ba.netlify.app/',
     repo: 'https://github.com/Erick-Hdez/Edge-Ledger',
     icons: ` 
@@ -133,7 +133,7 @@ const modals = {
     img: 6,
     id: 'modal-2',
     text:
-      'Guess My Number is a simply game that generates randoom numbers between one interval from 1 to 20, is build on HTML, CSS, and mainly JavaScript"',
+      'Guess My Number is a simple game that generates random numbers between  1 to 20 where the player has to guess the randoom number and when it guessed the screen color turns to green. This game  is build on HTML, CSS and the logic with JavaScript.',
     url: 'https://jolly-shaw-3d7118.netlify.app/',
     repo: 'https://github.com/Erick-Hdez/Guess-my-number',
     icons: `
@@ -147,22 +147,22 @@ const modals = {
     img: 2,
     id: 'modal-3',
     text:
-      'Nare is website mainly build with grid and flex-box , JavaScript and JQuery, "',
+      'It is a website that I designed for a client that sells delicious walnut and apple tarts in the city of Chihuahua Mexico. The web site is fully responsive and is built on HTML, CSS and JQuery.',
     url: 'https://www.nare.mx/',
     repo: 'https://github.com/Erick-Hdez/Nare',
     icons: `
       <i class="devicon-html5-plain-wordmark colored"></i>
       <i class="devicon-css3-plain-wordmark colored"></i>
       <i class="devicon-jquery-plain-wordmark colored"></i>
-      <i class="devicon-javascript-plain colored"></i>
-    `,
+      `,
+    // <i class="devicon-javascript-plain colored"></i>
   },
   'modal-4': {
     title: 'News Website',
     img: 3,
     id: 'modal-4',
     text:
-      'News Grid  is website mainly build with grid CSS and HTML, is an static and beutiful website template redy to use as a News Website or personal blog"',
+      'It is a static website  template  build with grid CSS and HTML ready to adapt as a News Website or personal blog.',
     url: 'https://stoic-curie-a04cae.netlify.app/',
     repo: 'https://github.com/Erick-Hdez/NewsGrid',
     icons: `
@@ -175,7 +175,7 @@ const modals = {
     img: 5,
     id: 'modal-5',
     text:
-      'My portfolio Website is my personal web, is built on HTML, Sass, Javascript and JQuery, this project have a bunch of css animations and key frames with a lot of JavaScript to add functionality and is fully responsive"',
+      'It is my personalized web, built on HTML, Sass, Javascript and JQuery.  This project is fully responsive and have a background stars with parallax effect animation impemented with sass functions and css keyframes, also have a JavaScript functionality to handle a type writting effect at the hero page,  animated knowledge time line with SVG icons  and a pop window that shows different information referent to any of my porjects.',
     url: '#home',
     repo: 'https://github.com/Erick-Hdez/My-porfolio',
     icons: `
@@ -189,8 +189,10 @@ const modals = {
     title: 'Space Dice Game',
     img: 7,
     id: 'modal-6',
-    text:
-      'Space Dice is a nice game that roll a dice randoomly, is built in HTML CSS and Javascript, have a very nice layout whit a beutifully stars background animation"',
+    text: `It is a game that shows a random dice on the screen, it is based on two simple rules.
+        1. If the value of the die is 1, the player loses his turn,
+        2. The first player to score 100 points wins the game.
+       This game is made with HTML Sass and Javascript.`,
     url: 'https://laughing-noether-509132.netlify.app/',
     repo: 'https://github.com/Erick-Hdez/Roll-dice',
     icons: `
@@ -203,7 +205,8 @@ const modals = {
     title: 'Professional Portoflio',
     img: 4,
     id: 'modal-7',
-    text: 'Professional portfolio made with HTML SASS and JavasCript"',
+    text:
+      'Professional portfolio web template fully responsive made with HTML Sass and JavasCript"',
     url: 'https://wizardly-nobel-d3f330.netlify.app/',
     repo: 'https://github.com/Erick-Hdez/portfolio_website',
     icons: `
@@ -216,11 +219,10 @@ const modals = {
 
   showModalInfo(str) {
     const mod = this[str];
-    // <button class="close-modal">&times;</button>
 
+    // <button class="close-modal">&times;</button>
     const HTMLString = `
     <div class="flex-align">
-    
         <div class="img-mookup">
         <img src="img/${mod.img}.png" alt="Mookup" class="mookup" />
         ${mod.icons}
